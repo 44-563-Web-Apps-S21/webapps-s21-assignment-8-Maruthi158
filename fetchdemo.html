@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            Request of Description
+        </title>
+    </head>
+    <body>
+        <h2> Priyanka Maruthi computes </h2>
+
+    <input id='inputpOne' type="number"><br/>
+    <br/>
+    <input id='inputTwo' type="number"><br/>
+
+    <button onclick="fetchResponse()"> Remote Compute </button>
+
+    <div id="result">
+        Your result will be displayed here.
+    </div>
+
+    <script>
+        function fetchResponse() {
+            var x = document.getElementById("inputpOne").value
+            var y = document.getElementById("inputTwo").value
+            let response = fetch("http://127.0.0.1:3001/?x=" + x + "&y=" + y)
+                .then((response) => { return response.text() })
+                .then(
+                    (text) => {
+
+                        console.log(text)
+
+                        document.getElementById("result").innerHTML = text
+
+                    })
+                .catch(
+                    (text) => {
+
+                        console.log(text)
+
+                        document.getElementById("result").innerHTML = text
+                    });
+        }
+        </script>
+        
+    </body>
+</html>

@@ -19,11 +19,13 @@ const server =
 
       if (req.method === 'GET' ) {
        
-          console.log("Look for query parameter data: " + search_params.get("data"))
+        console.log("Look for query parameter data: " + search_params.get("data"))
           x=search_params.get("x");
           y=search_params.get("y");
 
           // Process the queries here
+          console.log(x)
+          console.log(y)
           res.statusCode = 200      //code for OK
           res.setHeader('Content-Type', 'text/plain') 
           res.write(`hypot(${x},${y}) is ${Math.hypot(x, y)}`)
