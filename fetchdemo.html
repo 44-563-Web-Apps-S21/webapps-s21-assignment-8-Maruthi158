@@ -11,14 +11,14 @@
     <br/>
     <input id='inputTwo' type="number"><br/>
 
-    <button onclick="fetchResponse()"> Remote Compute </button>
+    <button onclick="fetchResponses()"> Remote Compute </button>
 
     <div id="result">
         Your result will be displayed here.
     </div>
 
     <script>
-        function fetchResponse() {
+        function fetchResponses() {
             var x = document.getElementById("inputpOne").value
             var y = document.getElementById("inputTwo").value
             let response = fetch("http://127.0.0.1:3001/?x=" + x + "&y=" + y)
