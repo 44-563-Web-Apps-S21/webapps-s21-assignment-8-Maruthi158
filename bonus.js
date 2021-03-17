@@ -4,7 +4,7 @@ const http = require('http')    //Pull in a useful node package
 const hostname = '127.0.0.1'    //Local host
 const port = 3001               //Not assigned
 
-const array1 = ['Amazing', 'Endorsment', 'Eligible', 'Beauty', 'Beast', 'Burning'];
+const array1 = ['admirable', 'adorable', 'alluring', 'angelic', 'appealing', 'beauteous'];
       for (var i = 0; i < array1.length; i++) {
         console.log(array1[i]);
       }
